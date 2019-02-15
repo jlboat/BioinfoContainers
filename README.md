@@ -16,8 +16,9 @@ Singularity_fastqc
 
 Singularity_trimmomatic
 
-### Expression Quantification
+### Expression Quantification/Alternative Splicing
 Singularity_stringtie
+Singularity_hmmsplicer
 
 ### Differential Expression
 Singularity_limma-voom
