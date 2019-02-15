@@ -1,0 +1,13 @@
+Bootstrap: docker
+
+From: ubuntu:latest
+
+%post
+    apt-get update --fix-missing && apt-get install -y wget
+    wget --quiet http://opengene.org/fastp/fastp -O /opt/fastp
+    chmod 777 /opt/fastp
+    mkdir -p /ufrc /orange /bio /rlts /scratch/local
+
+%runscript
+    exec /opt/fastp "$@"
+
