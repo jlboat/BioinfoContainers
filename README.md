@@ -9,8 +9,11 @@ bcl2fastq
 
 ### FASTQ Processing Programs
 Singularity_fastp
+
 Singularity_fastp_conda # Installed via conda
+
 Singularity_fastqc
+
 Singularity_trimmomatic
 
 ### Expression Quantification
@@ -24,8 +27,10 @@ Singularity_multiqc
 
 ### Various Scripts/Programs
 Singularity_bioscripts
+
 Singularity_conda
 
 ### Genome Viewers
 Singularity_IGB
+
 Singularity_IGV
