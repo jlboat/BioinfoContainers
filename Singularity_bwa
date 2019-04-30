@@ -1,0 +1,15 @@
+Bootstrap: docker
+
+From: ubuntu:latest
+
+%post
+    apt-get update --fix-missing && apt-get install -y git g++ zlib1g gcc make zlib1g-dev curl
+    cd /opt/
+    git clone https://github.com/lh3/bwa.git
+    cd bwa; make
+    apt-get autoclean
+    chmod -R 777 /opt/bwa
+
+%runscript
+    exec /opt/bwa/bwa "$@"
+
