@@ -1,0 +1,18 @@
+Bootstrap: docker
+
+From: ubuntu:latest
+
+%post
+    apt-get update --fix-missing && apt-get install -y git autoconf g++ zlib1g gcc make automake pkg-config zlib1g-dev curl
+    cd /opt/
+    git clone https://github.com/vcftools/vcftools.git
+    cd vcftools
+    ./autogen.sh
+    ./configure
+    make
+    make install
+    chmod -R 777 /opt/vcftools
+
+%runscript
+    exec /usr/local/bin/vcftools "$@"
+
