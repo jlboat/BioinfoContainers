@@ -5,40 +5,38 @@ Various Singularity recipes I've used to generate containers
 ## Container Recipes
 
 ### BCL Processing Programs
-  * Singularity_bcl2fastq
+  * Singularity.bcl2fastq
 
 ### FASTQ Processing Programs
-  * Singularity_fastp
-  * Singularity_fastp_conda # Installed via conda
-  * Singularity_fastqc
-  * Singularity_sabre
-  * Singularity_trimmomatic
+  * Singularity.fastp
+  * Singularity.fastqc
+  * Singularity.sabre
+  * Singularity.trimmomatic
 
 ### Read Aligners
-  * Singularity_hisat2
-  * Singularity_STAR
-  * Singularity_bwa
+  * Singularity.hisat2
+  * Singularity.STAR
+  * Singularity.bwa
 
 ### Expression Quantification/Alternative Splicing
-  * Singularity_stringtie
-  * Singularity_hmmsplicer
+  * Singularity.stringtie
+  * Singularity.hmmsplicer
 
 ### Variant Callers/Analysis tools
-  * Singularity_platypus
-  * Singularity_vcftools
-  * Singularity_snpeff
+  * Singularity.vcftools
+  * Singularity.snpeff
 
 ### Differential Expression
-  * Singularity_limma-voom
+  * Singularity.limma-voom
 
 ### Report Generation
-  * Singularity_multiqc
+  * Singularity.multiqc
 
 ### Various Scripts/Aggregate Programs
-  * Singularity_bioscripts
-  * Singularity_conda
-  * Singularity_deeptools
+  * Singularity.bioscripts
+  * Singularity.conda
+  * Singularity.deeptools
 
 ### Genome Viewers
-  * Singularity_IGB
-  * Singularity_IGV
+  * Singularity.IGB
+  * Singularity.IGV
