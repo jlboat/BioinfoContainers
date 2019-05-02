@@ -7,4 +7,4 @@ From: rocker/verse:3.5.1
     R -e "install.packages(c('ggplot2','readr','tidyr','RColorBrewer','DT','knitr','rmarkdown'), repos='https://cloud.r-project.org/')"
 
 %runscript
-    exec Rscript "$@"
+    exec Rscript "$@" 

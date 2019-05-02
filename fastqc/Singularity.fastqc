@@ -9,7 +9,6 @@ From: ubuntu:latest
     unzip /opt/fastqc_v0.11.8.zip
     rm /opt/fastqc_v0.11.8.zip
     chmod a+x /FastQC/fastqc
-    mkdir -p /ufrc /orange /bio /rlts /scratch/local
 
 %runscript
     exec /FastQC/fastqc "$@"

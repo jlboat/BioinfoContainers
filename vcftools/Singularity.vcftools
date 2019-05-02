@@ -15,4 +15,3 @@ From: ubuntu:latest
 
 %runscript
     exec /usr/local/bin/vcftools "$@"
-

@@ -9,4 +9,4 @@ From: debian:latest
     mvn clean install -DskipTests=true
 
 %runscript
-    exec /integrated-genome-browser/run_igb.sh
+    exec /integrated-genome-browser/run_igb.sh 

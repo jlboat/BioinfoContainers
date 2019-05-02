@@ -5,7 +5,6 @@ From: python:2
 %post
     apt-get update --fix-missing && apt-get install -y python-pip
     pip install multiqc
-    mkdir -p /ufrc /orange /bio /rlts /scratch/local
 
 %runscript
     exec multiqc "$@"
