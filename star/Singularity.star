@@ -14,4 +14,3 @@ From: debian:latest
 
 %runscript
     exec "$@"
-

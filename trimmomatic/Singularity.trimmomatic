@@ -12,4 +12,3 @@ From: ubuntu:latest
 
 %runscript
     exec java -jar /Trimmomatic-0.38/trimmomatic-0.38.jar "$@"
-

@@ -9,3 +9,4 @@ From: debian:latest
 
 %runscript
     exec /IGV_2.4.18/igv.sh
+

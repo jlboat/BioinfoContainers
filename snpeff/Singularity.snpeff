@@ -23,4 +23,3 @@ From: debian:latest
 
 %runscript
     exec java -jar /opt/conda/share/snpeff-4.3.1t-2/snpEff.jar "$@"
-

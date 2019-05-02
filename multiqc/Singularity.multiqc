@@ -8,4 +8,3 @@ From: python:2
 
 %runscript
     exec multiqc "$@"
-

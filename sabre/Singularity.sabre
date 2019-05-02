@@ -12,3 +12,4 @@ From: ubuntu:latest
 
 %runscript
     exec /opt/sabre/sabre "$@"
+
