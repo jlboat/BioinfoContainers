@@ -1,6 +1,7 @@
 # SingularityRecipes
-Various Singularity recipes I've used to generate containers
+Various Singularity recipes I've used to generate bioinformatics containers
 
+[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/2877)
 
 ## Container Recipes
 
