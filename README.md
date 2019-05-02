@@ -11,6 +11,7 @@ Various Singularity recipes I've used to generate containers
   * Singularity_fastp
   * Singularity_fastp_conda # Installed via conda
   * Singularity_fastqc
+  * Singularity_sabre
   * Singularity_trimmomatic
 
 ### Read Aligners
@@ -22,8 +23,10 @@ Various Singularity recipes I've used to generate containers
   * Singularity_stringtie
   * Singularity_hmmsplicer
 
-### Variant Callers
+### Variant Callers/Analysis tools
+  * Singularity_platypus
   * Singularity_vcftools
+  * Singularity_snpeff
 
 ### Differential Expression
   * Singularity_limma-voom
@@ -31,7 +34,7 @@ Various Singularity recipes I've used to generate containers
 ### Report Generation
   * Singularity_multiqc
 
-### Various Scripts/Programs
+### Various Scripts/Aggregate Programs
   * Singularity_bioscripts
   * Singularity_conda
   * Singularity_deeptools
