@@ -3,6 +3,9 @@ Various Singularity recipes I've used to generate bioinformatics containers
 
 [![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/2877)
 
+## Obtaining a container
+    singularity pull shub://jlboat/BioinfoContainers:fastp   # or exchange fastp for any other container listed here
+
 ## Container Recipes
 
 ### BCL Processing Programs
