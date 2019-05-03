@@ -2,6 +2,9 @@ Bootstrap: docker
 
 From: ubuntu:latest
 
+%help
+    singularity run vcftools.simg -h
+
 %post
     apt-get update --fix-missing && apt-get install -y git autoconf g++ zlib1g gcc make automake pkg-config zlib1g-dev curl
     cd /opt/
