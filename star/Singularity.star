@@ -2,6 +2,9 @@ Bootstrap: docker
 
 From: debian:latest
 
+%help
+singularity run star.simg STAR
+
 %environment
     PATH=$PATH:/STAR/bin/Linux_x86_64/
 
