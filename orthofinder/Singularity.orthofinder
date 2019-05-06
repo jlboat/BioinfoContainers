@@ -1,0 +1,35 @@
+Bootstrap: docker
+
+From: ubuntu:latest
+
+%post
+    apt-get update --fix-missing && apt-get install -y wget build-essential automake mcl ncbi-blast+
+    
+    # Install FastME
+    cd /opt/
+    wget https://gite.lirmm.fr/atgc/FastME/raw/master/tarball/fastme-2.1.6.1.tar.gz
+    tar -xvzf fastme-2.1.6.1.tar.gz
+    rm fastme-2.1.6.1.tar.gz
+    cd fastme-2.1.6.1
+    ./configure
+    make
+    make install
+
+    # Install Diamond
+    cd /opt
+    wget https://github.com/bbuchfink/diamond/releases/download/v0.9.22/diamond-linux64.tar.gz
+    tar xzf diamond-linux64.tar.gz
+    cp diamond /usr/local/bin    
+
+    # Install OrthoFinder
+    cd /opt
+    wget https://github.com/davidemms/OrthoFinder/releases/download/2.3.3/OrthoFinder-2.3.3.tar.gz
+    tar -xvzf OrthoFinder-2.3.3.tar.gz
+    rm OrthoFinder-2.3.3.tar.gz
+    cd OrthoFinder-2.3.3/
+    
+    chmod -R 777 /opt/*
+
+%runscript
+    exec /opt/OrthoFinder-2.3.3/orthofinder "$@"
+
