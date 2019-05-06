@@ -1,0 +1,26 @@
+Bootstrap: docker
+
+From: ubuntu:latest
+
+%help
+    singularity run lastz.simg -h
+
+%post
+    apt-get update --fix-missing && apt-get install -y git build-essential
+    cd /opt/
+    git clone https://github.com/lastz/lastz
+    cd lastz/src
+    # While the edit below is unfortunate, it didn't compile otherwise
+    # Remove flag for treating warnings as errors
+    sed -i 's/-Werror //g' Makefile
+    make
+    make install
+    chmod -R 777 /opt/lastz
+
+%test
+    cd /opt/lastz/src/
+    make test
+
+%runscript
+    exec /opt/lastz/src/lastz "$@"
+
