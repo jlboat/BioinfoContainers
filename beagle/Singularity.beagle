@@ -1,0 +1,16 @@
+Bootstrap: docker
+
+From: debian:latest
+
+%help
+    # Run as below for beagle help
+    singularity run beagle.simg 
+
+%post
+    apt-get update --fix-missing && apt-get install -y wget openjdk-8-jre
+    cd /opt
+    wget https://faculty.washington.edu/browning/beagle/beagle.28Sep18.793.jar
+    chmod 777 /opt
+
+%runscript
+    exec java -jar /opt/beagle.28Sep18.793.jar "$@"
