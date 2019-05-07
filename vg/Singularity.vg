@@ -1,0 +1,12 @@
+Bootstrap: docker
+
+From: debian:latest
+
+%post
+    apt-get update --fix-missing && apt-get install -y wget
+    wget https://github.com/vgteam/vg/releases/download/v1.15.0/vg
+    mv vg /usr/bin/
+    chmod 777 /usr/bin/vg
+
+%runscript
+    exec vg "$@"
