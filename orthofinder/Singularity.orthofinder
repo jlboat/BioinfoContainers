@@ -8,7 +8,7 @@ From: ubuntu:latest
     OrthoFinder 2.3.3
 
 %post
-    apt-get update --fix-missing && apt-get install -y wget build-essential automake mcl ncbi-blast+
+    apt-get update --fix-missing && apt-get install -y wget build-essential automake mcl ncbi-blast+ && rm -rf /var/lib/apt/lists/*
     
     # Install FastME
     cd /opt/
@@ -32,7 +32,8 @@ From: ubuntu:latest
     tar -xvzf OrthoFinder-2.3.3.tar.gz
     rm OrthoFinder-2.3.3.tar.gz
     cd OrthoFinder-2.3.3/
-    
+   
+    apt-get remove -y wget build-essential automake  
     chmod -R 777 /opt/*
 
 %runscript
