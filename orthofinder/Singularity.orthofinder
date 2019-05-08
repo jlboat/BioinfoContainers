@@ -38,4 +38,3 @@ From: ubuntu:latest
 
 %runscript
     exec /opt/OrthoFinder-2.3.3/orthofinder "$@"
-

@@ -20,4 +20,3 @@ From: ubuntu:latest
 
 %runscript
     exec /opt/bwa/bwa "$@"
-

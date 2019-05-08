@@ -24,3 +24,4 @@ singularity run star.simg STAR
 
 %runscript
     exec "$@"
+
