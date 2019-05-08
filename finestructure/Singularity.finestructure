@@ -2,6 +2,10 @@ Bootstrap: docker
 
 From: ubuntu:latest
 
+%labels
+    Topic Bioinformatics
+    finestructure 0.1.0
+
 %help
     Commands on PATH:
         beagle2chromopainter.pl

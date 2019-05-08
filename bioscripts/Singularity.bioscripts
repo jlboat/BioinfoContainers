@@ -2,6 +2,10 @@ Bootstrap: docker
 
 From: ubuntu:latest
 
+%labels
+    Topic Bioinformatics
+    Language Python
+
 %environment
     export PATH="$PATH:/opt/miniconda/bin/:/opt/bioscripts/"
 

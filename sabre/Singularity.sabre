@@ -2,6 +2,10 @@ Bootstrap: docker
 
 From: ubuntu:latest
 
+%labels
+    Topic Bioinformatics
+    sabre latest
+
 %post
     apt-get update --fix-missing && apt-get install -y git gcc make zlib1g zlib1g-dev
     cd /opt/

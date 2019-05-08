@@ -2,6 +2,11 @@ Bootstrap: docker
 
 From: ubuntu:latest
 
+%labels
+    Topic Bioinformatics
+    Input BCF
+    bcftools 1.9
+
 %post
     apt-get update --fix-missing && apt-get install -y wget make zlib1g-dev gcc \
         pkg-config autoconf libncurses5-dev libbz2-dev liblzma-dev libcurl4-gnutls-dev libssl-dev

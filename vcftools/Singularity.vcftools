@@ -2,6 +2,11 @@ Bootstrap: docker
 
 From: ubuntu:latest
 
+%labels
+    Topic Bioinformatics
+    Input VCF
+    vcftools latest
+
 %help
     singularity run vcftools.simg -h
 

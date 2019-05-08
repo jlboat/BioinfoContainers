@@ -6,6 +6,12 @@ From: debian:latest
     # Run as below for beagle help
     singularity run beagle.simg 
 
+%labels
+    Topic Bioinformatics
+    Input BCL
+    Output FASTQ
+    beagle 5.0
+
 %post
     apt-get update --fix-missing && apt-get install -y wget openjdk-8-jre
     cd /opt

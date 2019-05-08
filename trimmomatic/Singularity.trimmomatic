@@ -2,6 +2,12 @@ Bootstrap: docker
 
 From: ubuntu:latest
 
+%labels
+    Topic Bioinformatics
+    Input FASTQ
+    Output FASTQ
+    trimmomatic 0.38
+
 %post
     apt-get update --fix-missing && apt-get install -y wget
     apt-get install -y zip

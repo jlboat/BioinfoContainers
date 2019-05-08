@@ -2,6 +2,12 @@ Bootstrap: docker
 
 From: debian:latest
 
+%labels
+    Topic Bioinformatics
+    Input FASTQ
+    Output BAM
+    hisat2 2.1.0
+
 %environment
     PATH=$PATH:/hisat2-2.1.0
 

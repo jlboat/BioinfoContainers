@@ -2,6 +2,10 @@ Bootstrap: docker
 
 From: ubuntu:latest
 
+%labels
+    Topic Bioinformatics
+    admixture 1.3.0
+
 %post
     apt-get update --fix-missing && apt-get install -y wget
     cd /opt

@@ -2,6 +2,12 @@ Bootstrap: docker
 
 From: debian:latest
 
+%labels
+    Topic Bioinformatics
+    Input FASTQ
+    Output BAM
+    STAR latest
+
 %help
 singularity run star.simg STAR
 

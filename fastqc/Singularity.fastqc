@@ -2,6 +2,13 @@ Bootstrap: docker
 
 From: ubuntu:latest
 
+%labels
+    Topic Bioinformatics
+    Input FASTQ
+    Output FASTQ_QC
+    fastqc 0.11.8
+
+
 %post
     apt-get update --fix-missing && apt-get install -y wget
     apt-get install -y zip default-jre perl

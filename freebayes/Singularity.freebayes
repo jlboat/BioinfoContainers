@@ -2,6 +2,12 @@ Bootstrap: docker
 
 From: ubuntu:latest
 
+%labels
+    Topic Bioinformatics
+    Input BAM
+    Output VCF
+    freebayes latest
+
 %help
     singularity run freebayes.simg -h
 

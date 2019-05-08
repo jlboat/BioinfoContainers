@@ -2,6 +2,10 @@ Bootstrap: docker
 
 From: ubuntu:latest
 
+%labels
+    Topic Bioinformatics
+    FastME 2.1.6.1
+
 %post
     apt-get update --fix-missing && apt-get install -y wget build-essential automake
     cd /opt/
