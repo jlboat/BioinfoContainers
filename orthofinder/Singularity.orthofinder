@@ -7,6 +7,9 @@ From: ubuntu:latest
     Input FASTA
     OrthoFinder 2.3.3
 
+%environment
+    export PATH="$PATH:/opt/OrthoFinder-2.3.3/"
+
 %post
     apt-get update --fix-missing && apt-get install -y wget build-essential automake mcl ncbi-blast+ && rm -rf /var/lib/apt/lists/*
     
@@ -24,7 +27,17 @@ From: ubuntu:latest
     cd /opt
     wget https://github.com/bbuchfink/diamond/releases/download/v0.9.22/diamond-linux64.tar.gz
     tar xzf diamond-linux64.tar.gz
-    cp diamond /usr/local/bin    
+    chmod 777 diamond
+    cp diamond /usr/bin    
+    
+    # Install mafft
+    wget https://mafft.cbrc.jp/alignment/software/mafft_7.427-1_amd64.deb
+    dpkg -i mafft_7.427-1_amd64.deb
+
+    # Install fasttree
+    wget http://www.microbesonline.org/fasttree/FastTree
+    chmod 777 FastTree
+    mv FastTree /usr/bin/
 
     # Install OrthoFinder
     cd /opt
@@ -32,9 +45,12 @@ From: ubuntu:latest
     tar -xvzf OrthoFinder-2.3.3.tar.gz
     rm OrthoFinder-2.3.3.tar.gz
     cd OrthoFinder-2.3.3/
+    ln -s /usr/bin/diamond
+    ln -s /usr/bin/mafft
+    ln -s /usr/bin/FastTree
    
     apt-get remove -y wget build-essential automake  
     chmod -R 777 /opt/*
 
 %runscript
-    exec /opt/OrthoFinder-2.3.3/orthofinder "$@"
+    exec orthofinder "$@"
