@@ -11,7 +11,7 @@ From: ubuntu:latest
     singularity run vcftools.simg -h
 
 %post
-    apt-get update --fix-missing && apt-get install -y git autoconf g++ zlib1g gcc make automake pkg-config zlib1g-dev curl
+    apt-get update --fix-missing && apt-get install -y git autoconf g++ zlib1g gcc make automake pkg-config zlib1g-dev curl perl libcurl4-gnutls-dev libbz2-dev liblzma-dev
     cd /opt/
     git clone https://github.com/vcftools/vcftools.git
     cd vcftools
@@ -20,7 +20,16 @@ From: ubuntu:latest
     make
     make install
     chmod -R 777 /opt/vcftools
+    cd /opt/
+    git clone https://github.com/samtools/htslib
+    cd htslib
+    autoheader
+    autoconf
+    ./configure
+    make
+    make install
+    chmod -R 777 /opt/htslib
 
 %runscript
-    exec /usr/local/bin/vcftools "$@"
+    exec "$@"
 
